@@ -1,3 +1,8 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
 # History files
 .Rhistory
 .Rapp.history
@@ -21,7 +26,7 @@
 # RStudio files
 .Rproj.user/
 
-# produced vignettes
+# Produced vignettes
 vignettes/*.html
 vignettes/*.pdf
 
@@ -42,8 +47,21 @@ vignettes/*.pdf
 # pkgdown site
 docs/
 
-# translation temp files
+# Translation temp files
 po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Ignore raw data files (adjust if needed)
+data/raw/
+
+# Ignore output or large files
+output/
