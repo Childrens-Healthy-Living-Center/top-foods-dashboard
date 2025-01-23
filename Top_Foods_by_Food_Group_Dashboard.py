@@ -268,6 +268,6 @@ st.markdown("---")  # Divider for better readability
 # Citation Section
 st.markdown("### Cite This App")
 citation_text = """
-University of Hawaii at Manoa, Children’s Healthy Living Center. Top Foods Dashboard: A Streamlit Application for Food Data Analysis, 2025. Accessed January 23, 2025. https://chl-top-foods.streamlit.app/
+University of Hawaii at Manoa, Children’s Healthy Living Center. Top Foods Dashboard: A Streamlit Application for Food Data Analysis, 2025. Accessed [Date]. https://chl-top-foods.streamlit.app/
 """
 st.text_area("Citation:", citation_text, height=100, help="Copy this citation for referencing this app.")
