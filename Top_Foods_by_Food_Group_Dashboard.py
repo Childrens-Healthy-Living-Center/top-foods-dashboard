@@ -4,8 +4,8 @@ import pandas as pd
 import plotly.express as px
 
 # Retrieve secrets
-all_foods_csv = st.secrets["ALL_FOODS_CSV"]["foods"]
-sample_sizes_csv = st.secrets["SAMPLE_SIZES_CSV"]["data"]
+all_foods_data = st.secrets["ALL_FOODS_CSV"]["foods"]
+sample_sizes_data = st.secrets["SAMPLE_SIZES_CSV"]["data"]
 
 # Convert secrets directly into DataFrames
 all_foods = pd.DataFrame(all_foods_data)
