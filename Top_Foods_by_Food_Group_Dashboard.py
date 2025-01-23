@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import io
 
 # Load data from Streamlit Secrets
 all_foods_csv = st.secrets["ALL_FOODS_CSV"]
