@@ -3,11 +3,11 @@ import pandas as pd
 import plotly.express as px
 
 # Load the main data
-data_file = './data/processed/all_foods.csv'
+data_file_url = "https://docs.google.com/spreadsheets/d/19XDQMrGeMJTOeZWEAJzEsmwmMk5c8JHMmj0kqytLf7A/edit?usp=sharing"
 all_foods = pd.read_csv(data_file)
 
 # Load sample sizes
-sample_sizes_file = './data/processed/sample_sizes.csv'
+sample_sizes_file_url = "https://docs.google.com/spreadsheets/d/1HUkmUfB9rE0ugBgbBxKKc38Kw4qsK3GFA5FYNeggKUE/edit?usp=drive_link"
 sample_sizes = pd.read_csv(sample_sizes_file)
 
 # Replace specific jurisdiction names for consistency
