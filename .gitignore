@@ -61,7 +61,7 @@ rsconnect/
 *.tmp
 
 # Ignore raw data files (adjust if needed)
-data/raw/
+data/
 
 # Ignore output or large files
 output/
