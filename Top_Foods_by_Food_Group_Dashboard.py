@@ -1,24 +1,25 @@
+import io
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import io
 
-# Load data from Streamlit Secrets
+# Retrieve secrets
 all_foods_csv = st.secrets["ALL_FOODS_CSV"]
 sample_sizes_csv = st.secrets["SAMPLE_SIZES_CSV"]
 
-# Convert CSV content from secrets into DataFrames
+# Convert TOML secrets to strings and then into DataFrames
 all_foods = pd.read_csv(io.StringIO(all_foods_csv))
 sample_sizes = pd.read_csv(io.StringIO(sample_sizes_csv))
 
 # Replace specific jurisdiction names for consistency
 all_foods['jurisdiction'] = all_foods['jurisdiction'].replace({
-    'Am Samoa': 'American Samoa',
-    'Marshall': 'Marshall Islands'
+    "HI": "Hawaii",
+    "AK": "Alaska"
 })
+
 sample_sizes['Jurisdiction'] = sample_sizes['Jurisdiction'].replace({
-    'Am Samoa': 'American Samoa',
-    'Marshall': 'Marshall Islands'
+    "HI": "Hawaii",
+    "AK": "Alaska"
 })
 
 # Merge sample sizes into the main dataset
