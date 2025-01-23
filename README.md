@@ -15,9 +15,7 @@ The **Top Foods Dashboard** is a Streamlit application designed to visualize foo
 - **Interactive Filters**:
   - Select specific jurisdictions and food groups to customize the visualizations.
   - Supports dynamic filtering with "Select All" functionality.
-- **Exportable Citation**:
-  - Provides a pre-written citation for referencing the app.
-
+  
 ---
 
 ## 🛠️ Technologies Used
