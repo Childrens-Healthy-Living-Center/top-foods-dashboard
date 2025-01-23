@@ -7,19 +7,23 @@ import plotly.express as px
 all_foods_csv = st.secrets["ALL_FOODS_CSV"]["foods"]
 sample_sizes_csv = st.secrets["SAMPLE_SIZES_CSV"]["data"]
 
-# Convert TOML secrets to strings and then into DataFrames
-all_foods = pd.read_csv(io.StringIO(all_foods_csv))
-sample_sizes = pd.read_csv(io.StringIO(sample_sizes_csv))
+# Convert secrets directly into DataFrames
+all_foods = pd.DataFrame(all_foods_data)
+sample_sizes = pd.DataFrame(sample_sizes_data)
+
+# Ensure numerical columns are properly converted, if necessary
+all_foods["count"] = pd.to_numeric(all_foods["count"], errors="coerce")
+sample_sizes["Frequency"] = pd.to_numeric(sample_sizes["Frequency"], errors="coerce")
 
 # Replace specific jurisdiction names for consistency
 all_foods['jurisdiction'] = all_foods['jurisdiction'].replace({
-    "HI": "Hawaii",
-    "AK": "Alaska"
+    'Am Samoa': 'American Samoa',
+    'Marshall': 'Marshall Islands'
 })
 
 sample_sizes['Jurisdiction'] = sample_sizes['Jurisdiction'].replace({
-    "HI": "Hawaii",
-    "AK": "Alaska"
+    'Am Samoa': 'American Samoa',
+    'Marshall': 'Marshall Islands'
 })
 
 # Merge sample sizes into the main dataset
