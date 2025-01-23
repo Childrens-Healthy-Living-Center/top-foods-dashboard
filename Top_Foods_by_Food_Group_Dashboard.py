@@ -2,13 +2,13 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# Load the main data
-data_file_url = "https://drive.google.com/file/d/1l2jdbDjbOpiNMVrPxQ2I9B_AUIt5-128/view?usp=sharing"
-all_foods = pd.read_csv(data_file_url)
+# Load data from Streamlit Secrets
+all_foods_csv = st.secrets["ALL_FOODS_CSV"]
+sample_sizes_csv = st.secrets["SAMPLE_SIZES_CSV"]
 
-# Load sample sizes
-sample_sizes_file_url = "https://drive.google.com/file/d/11tLaUwRMCND8av9zFuEtksw-Km04eLGq/view?usp=sharing"
-sample_sizes = pd.read_csv(sample_sizes_file_url)
+# Convert CSV content from secrets into DataFrames
+all_foods = pd.read_csv(io.StringIO(all_foods_csv))
+sample_sizes = pd.read_csv(io.StringIO(sample_sizes_csv))
 
 # Replace specific jurisdiction names for consistency
 all_foods['jurisdiction'] = all_foods['jurisdiction'].replace({
