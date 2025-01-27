@@ -269,5 +269,7 @@ st.markdown("---")  # Divider for better readability
 st.markdown("### Cite This App")
 citation_text = """
 University of Hawaii at Manoa, Children’s Healthy Living Center. Top Foods Dashboard: A Streamlit Application for Food Data Analysis, 2025. Accessed [Date]. https://chl-top-foods.streamlit.app/
+
+Novotny, R., Yamanaka, A. B., Dela Cruz, R., Strasburger, S., Boushey, C. J., Butel, J., Esquivel, M., Aflague, T. F., Fleming, T., Coleman, P., Deenik, J., Shallcross, L., & Wilkens, L. R. (2023). Food Group, Macronutrient Intake, and Metabolic Status in the US-Affiliated Pacific's Children's Healthy Living (CHL) Program. The Journal of nutrition, 152(12), 2898Ã2912. https://doi.org/10.1093/jn/nxac173
 """
 st.text_area("Citation:", citation_text, height=100, help="Copy this citation for referencing this app.")
